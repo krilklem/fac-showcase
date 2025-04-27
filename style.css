@@ -102,16 +102,19 @@ h3 {
 
 #left {
     height: 32em;
+    box-shadow: 3px 5px 1px var(--silver);
 }
 
 #main {
     flex-grow: 1;
     min-width: 16em;
     height: 70vh;
+    box-shadow: 0 5px 1px var(--silver);
 }
 
 #right {
     height: 16em;
+    box-shadow: -3px 5px 1px var(--silver);
 }
 
 #character {
@@ -128,20 +131,31 @@ h3 {
 #menu {
     padding: 0;
     text-align: center;
-    
 }
 
 button {
+    color: var(--white-smoke);
+    background-color: var(--erie-black);
+    box-shadow: 0 5px var(--jet);
     border: 2px solid var(--jet);
     border-radius: 8px;
-    color: var(--white-smoke);
     padding: 8px 16px;
     margin: 8px 0;
-    background-color: var(--erie-black);
     width: 100%;
+    font-weight: 700;
 }
 
-li {
+button:hover {
+    color: var(--jet);
+    background-color: var(--mikado-yellow);
+}
+
+button:active {
+    box-shadow: 0 1px var(--jet);
+    transform: translateY(4px);
+}
+
+#menu > li {
     list-style: none;
 }
 
