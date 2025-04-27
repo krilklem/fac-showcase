@@ -31,11 +31,43 @@ html {
     background-color: var(--mikado-yellow);
 }
 
+.stars {
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+.top {
+    animation: flip 2s infinite step-end;
+}
+
+.bottom {
+    animation: flip 2s infinite step-end reverse;
+}
+  
+@keyframes flip {
+    0% {
+        opacity: 1;
+    }
+    49% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 body {
     font-size: 14px;
     padding: 5vh 8vw;
     margin: 0;
     height: 100vh;
+    background-image:
+        repeating-linear-gradient(var(--white-smoke), var(--white-smoke) 2px, transparent 2px, transparent 1em),
+        repeating-linear-gradient(90deg, var(--white-smoke), var(--white-smoke) 2px, transparent 2px, transparent 1em);
 }
 
 #heading {
@@ -44,22 +76,22 @@ body {
 }
 
 .marquee-container {
-    white-space: nowrap;
-    width: 84vw;
-    padding: 0;
     overflow: hidden;
+    background-color: white;
+    box-shadow: 0 0 25px white;
 }
 
 .marquee-text {
+    white-space: nowrap;
     animation: scroll 30s infinite linear;
 }
 
 @keyframes scroll {
-    0% {
-        left: 100%;
-    } 100% {
-        left: 0%;
-        transform: translateX(-100%);
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-200%);
     }
 }
 
@@ -102,19 +134,19 @@ h3 {
 
 #left {
     height: 32em;
-    box-shadow: 3px 5px 1px var(--silver);
+    box-shadow: 4px 6px 1px var(--silver);
 }
 
 #main {
     flex-grow: 1;
     min-width: 16em;
     height: 70vh;
-    box-shadow: 0 5px 1px var(--silver);
+    box-shadow: 0 6px 1px var(--silver);
 }
 
 #right {
     height: 16em;
-    box-shadow: -3px 5px 1px var(--silver);
+    box-shadow: -4px 6px 1px var(--silver);
 }
 
 #character {
@@ -160,6 +192,9 @@ button:active {
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+    color: var(--mikado-yellow)
+}
+
+a::selection {
+    color: white;
 }
