@@ -5,17 +5,17 @@
 :root {
     --bright-green: #5AFF15;
     --kelly-green: #3EC300;
-    --bleu-de-france: #1789FC;
-    --chefchaouen-blue: #3F8EFC;
+    --bleu-de-france: #1789fc;
+    --chefchaouen-blue: #3f8efc;
     --slate-blue: #7067CF;
     --tropical-indigo: #7F7EFF;
-    --mikado-yellow: #FFC518;
+    --mikado-yellow: #ffc518;
 
-    --white-smoke: #F2F2F2;
-    --silver: #CCCCCC;
-    --grey: #A5A5A5;
+    --white-smoke: #f2f2f2;
+    --silver: #cccccc;
+    --grey: #a5a5a5;
     --jet: #333333;
-    --erie-black: #1F1F1F;
+    --erie-black: #1f1f1f;
 }
 
 html {
@@ -43,12 +43,24 @@ body {
     text-align: center;
 }
 
-.marquee {
+.marquee-container {
     white-space: nowrap;
-    width: 100%;
+    width: 84vw;
     padding: 0;
-    margin: 0;
     overflow: hidden;
+}
+
+.marquee-text {
+    animation: scroll 30s infinite linear;
+}
+
+@keyframes scroll {
+    0% {
+        left: 100%;
+    } 100% {
+        left: 0%;
+        transform: translateX(-100%);
+    }
 }
 
 .light-text {
@@ -102,6 +114,13 @@ h3 {
     height: 16em;
 }
 
+#character {
+    position: absolute;
+    top: 5px;
+    left: -30px;
+    z-index: 0;
+}
+
 .side {
     width: 16em;
 }
@@ -113,7 +132,6 @@ h3 {
 }
 
 button {
-    
     border: 2px solid var(--jet);
     border-radius: 8px;
     color: var(--white-smoke);

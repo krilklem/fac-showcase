@@ -11,18 +11,29 @@
         <script src="./script.js"></script>
 
         <h1 id="heading">Hey there, I'm Rafi.</h1>
-        <div class="marquee light-text">
-            Hello &bull; Not all advice is good adivce
-            &bull; Follow your heart, but remember to take your brain with you
-            &bull; Do something today that you'll thank yourself for tomorrow
-            &bull; If an opportunity does not knock, you can always build a door
-            &bull; Pain doesn't last forever
-            &bull; Life is short, so smile while you still have teeth &bull;
+
+        <div class="marquee-container light-text">
+            <div class="marquee-text">
+                Hello &bull; Not all advice is good adivce
+                &bull; Follow your heart, but remember to take your brain with you
+                &bull; Do something today that you'll thank yourself for tomorrow
+                &bull; If an opportunity does not knock, you can always build a door
+                &bull; Pain doesn't last forever
+                &bull; Life is short, so smile while you still have teeth &bull;
+
+                <!--duplicate for seemless loop-->
+                Hello &bull; Not all advice is good adivce
+                &bull; Follow your heart, but remember to take your brain with you
+                &bull; Do something today that you'll thank yourself for tomorrow
+                &bull; If an opportunity does not knock, you can always build a door
+                &bull; Pain doesn't last forever
+                &bull; Life is short, so smile while you still have teeth &bull;
+            </div>
         </div>
 
         <div id="container">
             <div id="left" class="side box">
-                <h3>menu</h3>
+                <h3>menu.exe</h3>
                 <div class="sub-box">
                     <ul id="menu">
                         <li><button id="about">about me</button></li>
@@ -40,7 +51,8 @@
             </div>
 
             <div id="right" class="side box">
-                <div class="sub-box">
+                <div class="sub-box" style="position: relative;">
+                    <img id="character" src="./me-grey.png" height="254px" alt="illustration of character leaning over picture frame">
                 </div>
             </div>
         </div>
