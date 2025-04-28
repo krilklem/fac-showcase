@@ -83,7 +83,7 @@ body {
 
 .marquee-text {
     white-space: nowrap;
-    animation: scroll 30s infinite linear;
+    animation: scroll 50s infinite linear;
 }
 
 @keyframes scroll {
