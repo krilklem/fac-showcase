@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menu.addEventListener("click", (event) => {
         let target = event.target.id;
-        console.log(target);
         switch ( target ) {
             case "about":
                 frame.src = "./about.html";
